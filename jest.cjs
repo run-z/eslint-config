@@ -3,7 +3,7 @@ module.exports = {
   extends: [
     'plugin:jest/recommended',
     'plugin:jest/style',
-    '@proc7ts/eslint-config/typescript',
+    '@run-z/eslint-config/typescript',
   ],
   plugins: [
     'jest',
