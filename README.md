@@ -25,7 +25,14 @@ Used in [Hatsy], [proc7ts], [run-z], and [Wesib] projects.
 Example Configuration
 ---------------------
 
-Put the following to `.eslint.cjs`:
+Add dependencies:
+```shell
+npm i eslint @run-z/eslint-config --save-dev
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev # TypeScript support
+npm i eslint-plugin-jest --save-dev # Jest support
+```
+
+Put the following to `.eslintrc.cjs`:
 
 ```javascript
 module.exports = {
