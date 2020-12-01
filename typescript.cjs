@@ -1,5 +1,4 @@
 const variableNamePattern = '^\\w+__[a-zA-Z0-9]+$';
-const quotedPropertyNamePattern = '^[^a-zA-Z\\$_]?.*[^a-zA-Z0-9\\$_].*$';
 
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -14,50 +13,8 @@ module.exports = {
       {
         types: {
           // Allow to use `object`
-          String: {
-            message: 'Use string instead',
-            fixWith: 'string',
-          },
-          Boolean: {
-            message: 'Use boolean instead',
-            fixWith: 'boolean',
-          },
-          Number: {
-            message: 'Use number instead',
-            fixWith: 'number',
-          },
-          Symbol: {
-            message: 'Use symbol instead',
-            fixWith: 'symbol',
-          },
-          Function: {
-            message: [
-              'The `Function` type accepts any function-like value.',
-              'It provides no type safety when calling the function, which can be a common source of bugs.',
-              'It also accepts things like class declarations, which will throw at runtime as they will not be called'
-              + ' with `new`.',
-              'If you are expecting the function to accept certain arguments, you should explicitly define'
-              + ' the function shape.',
-            ].join('\n'),
-          },
-
-          // object typing
-          Object: {
-            message: [
-              'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
-              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-              '- If you want a type meaning "any value", you probably want `unknown` instead.',
-            ].join('\n'),
-          },
-          '{}': {
-            message: [
-              '`{}` actually means "any non-nullish value".',
-              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-              '- If you want a type meaning "any value", you probably want `unknown` instead.',
-            ].join('\n'),
-          },
+          object: false,
         },
-        extendDefaults: false,
       },
     ],
     'brace-style': 'off',
@@ -111,22 +68,15 @@ module.exports = {
       },
       // Allow quoted property names that require quoting to contain any characters
       {
-        selector: 'property',
-        format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
-        leadingUnderscore: 'allow',
-        trailingUnderscore: 'allow',
-        filter: {
-          regex: quotedPropertyNamePattern,
-          match: false,
-        },
+        selector: ['objectLiteralProperty', 'objectLiteralMethod'],
+        format: null,
+        modifiers: ['requiresQuotes'],
       },
       {
-        selector: 'property',
-        format: null,
-        custom: {
-          regex: quotedPropertyNamePattern,
-          match: true,
-        },
+        selector: ['objectLiteralProperty', 'typeProperty'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble',
       },
       {
         selector: 'function',
@@ -167,7 +117,7 @@ module.exports = {
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
     '@typescript-eslint/no-invalid-void-type': [
-      'off', // BROKEN: Does not work for generic parameters defaults
+      'off', // BROKEN: Does not work for the default value of generic type parameter, e.g. `interface Type<T = void>`
       {
         allowInGenericTypeArguments: true,
         allowAsThisParameter: true,
@@ -177,13 +127,11 @@ module.exports = {
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-this-alias': 'off',
-    // BROKEN
+    // Required in some situations. E.g. error handling.
     '@typescript-eslint/no-unsafe-assignment': 'off',
-    // BROKEN
-    '@typescript-eslint/no-unsafe-call': 'off',
-    // BUGGED: Raises error when extending namespace interface.
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    // BROKEN
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-member-access': 'error',
+    // Unusable
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     'no-unused-expressions': 'off',
