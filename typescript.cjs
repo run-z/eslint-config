@@ -1,4 +1,4 @@
-const variableNamePattern = '^\\w+__[a-zA-Z0-9]+$';
+const variableNamePattern = '^[a-zA-Z][a-zA-Z0-9]*([_\\$][a-zA-Z0-9]+)*__[a-zA-Z0-9]+$';
 
 module.exports = {
   parser: '@typescript-eslint/parser',
