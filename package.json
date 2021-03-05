@@ -42,7 +42,7 @@
     "eslint": "^7.21.0",
     "eslint-plugin-jest": "^24.1.5",
     "run-z": "=1.6.1-bootstrap",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.3"
   },
   "scripts": {
     "all": "run-z build",
