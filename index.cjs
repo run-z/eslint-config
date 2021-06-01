@@ -72,7 +72,7 @@ module.exports = {
       },
     ],
     'no-multi-str': 'error',
-    'no-multiple-empty-lines': 'error',
+    'no-multiple-empty-lines': ['error', { max: 2, maxBOF: 0, maxEOF: 0 }],
     'no-tabs': 'error',
     'no-trailing-spaces': 'error',
     'no-use-before-define': [
