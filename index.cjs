@@ -139,7 +139,7 @@ module.exports = {
       },
     ],
     'space-in-parens': 'error',
-    'space-infix-ops': 'error',
+    'space-infix-ops': ['error', { int32Hint: false }],
     'space-unary-ops': 'error',
     'spaced-comment': [
       'error',

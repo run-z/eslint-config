@@ -179,6 +179,8 @@ module.exports = {
         asyncArrow: 'always',
       },
     ],
+    'space-infix-ops': 'off',
+    '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/unbound-method': 'off',
