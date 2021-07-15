@@ -41,7 +41,7 @@
     "@typescript-eslint/parser": "^4.28.3",
     "eslint": "^7.30.0",
     "eslint-plugin-jest": "^24.3.6",
-    "run-z": "=1.9.1-bootstrap",
+    "run-z": "=1.9.2-bootstrap",
     "typescript": "^4.3.5"
   },
   "scripts": {
