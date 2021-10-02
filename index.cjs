@@ -107,6 +107,15 @@ module.exports = {
         switches: 'never',
       },
     ],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: ['break', 'continue', 'return'] },
+      { blankLine: 'always', prev: ['break', 'continue', 'return'], next: '*' },
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'always', prev: '*', next: ['const', 'let', 'var'] },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: '*', next: ['class', 'function'] },
+    ],
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     quotes: [
