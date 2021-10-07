@@ -27,6 +27,8 @@ module.exports = {
     ],
     '@typescript-eslint/class-literal-property-style': ['error', 'getters'],
     camelcase: 'off',
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': 'error',
     '@typescript-eslint/explicit-function-return-type': [
