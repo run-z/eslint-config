@@ -22,8 +22,8 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
-    "eslint": "^8.5.0",
-    "eslint-plugin-jest": "^25.3.0"
+    "eslint": "^8.6.0",
+    "eslint-plugin-jest": "^25.3.4"
   },
   "peerDependenciesMeta": {
     "@typescript-eslint/eslint-plugin": {
@@ -39,8 +39,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
-    "eslint": "^8.5.0",
-    "eslint-plugin-jest": "^25.3.3",
+    "eslint": "^8.6.0",
+    "eslint-plugin-jest": "^25.3.4",
     "run-z": "=1.10.0-bootstrap",
     "typescript": "^4.5.4"
   },
