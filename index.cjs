@@ -73,6 +73,21 @@ module.exports = {
     ],
     'no-multi-str': 'error',
     'no-multiple-empty-lines': ['error', { max: 2, maxBOF: 0, maxEOF: 0 }],
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: [
+          {
+            group: ['*/src', '*/src/**', '@*/*/src', '@*/*/src/**'],
+            message: 'Please import a module rather than source file',
+          },
+          {
+            group: ['*/dist', '*/dist/**', '@*/*/dist', '@*/*/dist/**', '../**/dist', '../**/dist/**'],
+            message: 'Please import a module rather than distribution bundle',
+          },
+        ],
+      },
+    ],
     'no-tabs': 'error',
     'no-trailing-spaces': 'error',
     'no-use-before-define': [
