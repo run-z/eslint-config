@@ -1,6 +1,6 @@
 {
   "name": "@run-z/eslint-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Run Z ESLint configuration",
   "homepage": "https://github.com/run-z/eslint-config",
   "repository": {
