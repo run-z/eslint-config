@@ -1,3 +1,5 @@
+const { builtinModules } = require('node:module');
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
@@ -76,14 +78,15 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
+        paths: nodeBuiltins(),
         patterns: [
           {
             group: ['*/src', '*/src/**', '@*/*/src', '@*/*/src/**'],
-            message: 'Please import a module rather than source file',
+            message: 'Import module rather than source file',
           },
           {
             group: ['*/dist', '*/dist/**', '@*/*/dist', '@*/*/dist/**', '../**/dist', '../**/dist/**'],
-            message: 'Please import a module rather than distribution bundle',
+            message: 'Import module rather than distribution bundle',
           },
         ],
       },
@@ -185,3 +188,9 @@ module.exports = {
     es2017: true,
   },
 };
+
+function nodeBuiltins() {
+  return builtinModules
+      .filter(name => !name.startsWith('node:'))
+      .map(name => ({ name, message: `Import 'node:${name}' instead` }));
+}
