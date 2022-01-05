@@ -1,5 +1,4 @@
-Run Z ESLint Configuration
-==========================
+# Run Z ESLint Configuration
 
 [![NPM][npm-image]][npm-url]
 [![Build Status][build-status-img]][build-status-link]
@@ -15,29 +14,28 @@ Used in [Hatsy], [proc7ts], [run-z], and [Wesib] projects.
 [build-status-link]: https://github.com/run-z/eslint-config/actions?query=workflow:Build
 [github-image]: https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational
 [github-url]: https://github.com/run-z/eslint-config
-
-[Hatsy]: https://github.com/hatsyjs
+[hatsy]: https://github.com/hatsyjs
 [proc7ts]: https://github.com/proc7ts
 [run-z]: https://github.com/run-z
-[Wesib]: https://github.com/wesib
+[wesib]: https://github.com/wesib
 
-
-Example Configuration
----------------------
+## Example Configuration
 
 Add dependencies:
+
 ```shell
-npm i eslint @run-z/eslint-config --save-dev
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev # TypeScript support
-npm i eslint-plugin-jest --save-dev # Jest support
+pnpm add -D eslint @run-z/eslint-config
+pnpm add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser  # TypeScript support
+pnpm add -D eslint-plugin-jest --save-dev  # Jest support
 ```
 
 Put the following to `.eslintrc.cjs`:
 
 ```javascript
+// prettier-ignore
 module.exports = {
   root: true,
-  ignorePatterns: ['node_modules/', 'dist/', 'target/', 'd.ts/', '*.d.ts'],
+  ignorePatterns: ['node_modules/', 'dist/', 'target/', '*.d.ts'],
   extends: [
     '@run-z',
   ],

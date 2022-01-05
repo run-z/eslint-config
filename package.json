@@ -41,6 +41,7 @@
     "@typescript-eslint/parser": "^5.9.0",
     "eslint": "^8.6.0",
     "eslint-plugin-jest": "^25.3.4",
+    "prettier": "^2.5.1",
     "run-z": "=1.10.0-bootstrap",
     "typescript": "^4.5.4"
   },
@@ -49,6 +50,7 @@
     "build": "run-z lint",
     "clean": "run-z",
     "lint": "run-z --then eslint .",
+    "format": "run-z +z --then prettier --write \"**.{json,md}\"",
     "test": "run-z",
     "z": "run-z"
   }
