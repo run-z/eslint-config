@@ -50,7 +50,7 @@
     "build": "run-z lint",
     "clean": "run-z",
     "lint": "run-z --then eslint .",
-    "format": "run-z +z --then prettier --write \"**.{json,md}\"",
+    "format": "run-z +z --then prettier --write \"**/*.{json,md}\"",
     "test": "run-z",
     "z": "run-z"
   }
