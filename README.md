@@ -32,13 +32,10 @@ pnpm add -D eslint-plugin-jest --save-dev  # Jest support
 Put the following to `.eslintrc.cjs`:
 
 ```javascript
-// prettier-ignore
 module.exports = {
   root: true,
   ignorePatterns: ['node_modules/', 'dist/', 'target/', '*.d.ts'],
-  extends: [
-    '@run-z',
-  ],
+  extends: ['@run-z'],
   overrides: [
     // JavaScript
     {
@@ -50,9 +47,7 @@ module.exports = {
     // TypeScript
     {
       files: ['*.ts'],
-      extends: [
-        '@run-z/eslint-config/typescript',
-      ],
+      extends: ['@run-z/eslint-config/typescript'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: './tsconfig.json',
@@ -64,9 +59,7 @@ module.exports = {
     // Tests (Jest-driven)
     {
       files: ['*.spec.ts'],
-      extends: [
-        '@run-z/eslint-config/jest',
-      ],
+      extends: ['@run-z/eslint-config/jest'],
       parserOptions: {
         // Dedicated TypeScript configuration for tests
         project: './tsconfig.spec.json',
