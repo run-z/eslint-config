@@ -20,10 +20,10 @@
     "./typescript": "./typescript.cjs"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^8.16.0",
-    "eslint-plugin-jest": "^26.4.2"
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-jest": "^26.4.6"
   },
   "peerDependenciesMeta": {
     "@typescript-eslint/eslint-plugin": {
@@ -38,13 +38,13 @@
   },
   "devDependencies": {
     "@run-z/prettier-config": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^8.16.0",
-    "eslint-plugin-jest": "^26.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-jest": "^26.4.6",
     "prettier": "^2.6.2",
     "run-z": "=1.10.0-bootstrap",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.3"
   },
   "scripts": {
     "all": "run-z build",
