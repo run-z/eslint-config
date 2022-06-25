@@ -93,13 +93,6 @@ module.exports = {
     ],
     'no-tabs': 'error',
     'no-trailing-spaces': 'error',
-    'no-use-before-define': [
-      'error',
-      {
-        functions: false,
-        classes: false,
-      },
-    ],
     'no-var': 'error',
     'no-whitespace-before-property': 'error',
     'object-curly-newline': [
