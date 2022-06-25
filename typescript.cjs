@@ -11,6 +11,7 @@ module.exports = {
     '@typescript-eslint/ban-types': [
       'error',
       {
+        extendDefaults: true,
         types: {
           // Allow to use `object`
           object: false,
@@ -37,7 +38,7 @@ module.exports = {
         allowExpressions: true,
       },
     ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'error',
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'error',
     'func-call-spacing': 'off',
@@ -137,7 +138,6 @@ module.exports = {
     // Unusable
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-    'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
