@@ -45,6 +45,15 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': 'error',
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': 'error',
+    'lines-between-class-members': 'off',
+    '@typescript-eslint/lines-between-class-members': [
+      'error',
+      'always',
+      {
+        exceptAfterOverload: true,
+        exceptAfterSingleLine: true,
+      },
+    ],
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
@@ -142,6 +151,8 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'padding-line-between-statements': 'off',
     '@typescript-eslint/padding-line-between-statements': [
       'error',

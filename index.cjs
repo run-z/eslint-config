@@ -5,9 +5,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  extends: [
-    'eslint:recommended',
-  ],
+  extends: ['eslint:recommended'],
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'arrow-parens': ['error', 'as-needed'],
@@ -85,7 +83,14 @@ module.exports = {
             message: 'Import module rather than source file',
           },
           {
-            group: ['*/dist', '*/dist/**', '@*/*/dist', '@*/*/dist/**', '../**/dist', '../**/dist/**'],
+            group: [
+              '*/dist',
+              '*/dist/**',
+              '@*/*/dist',
+              '@*/*/dist/**',
+              '../**/dist',
+              '../**/dist/**',
+            ],
             message: 'Import module rather than distribution bundle',
           },
         ],
@@ -184,6 +189,6 @@ module.exports = {
 
 function nodeBuiltins() {
   return builtinModules
-      .filter(name => !name.startsWith('node:'))
-      .map(name => ({ name, message: `Import 'node:${name}' instead` }));
+    .filter(name => !name.startsWith('node:'))
+    .map(name => ({ name, message: `Import 'node:${name}' instead` }));
 }

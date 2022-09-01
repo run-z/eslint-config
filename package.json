@@ -43,6 +43,7 @@
     "eslint": "^8.23.0",
     "eslint-plugin-jest": "^27.0.1",
     "prettier": "^2.7.1",
+    "prettier-eslint-cli": "^7.1.0",
     "run-z": "=1.10.0-bootstrap",
     "typescript": "^4.8.2"
   },
@@ -51,7 +52,7 @@
     "build": "run-z lint",
     "clean": "run-z",
     "lint": "run-z --then eslint .",
-    "format": "run-z +z --then prettier --write \"**/*.{json,md}\"",
+    "format": "run-z +z --then prettier-eslint --write \"**/*.*\"",
     "test": "run-z",
     "z": "run-z"
   }

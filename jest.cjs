@@ -1,13 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    'plugin:jest/recommended',
-    'plugin:jest/style',
-    '@run-z/eslint-config/typescript',
-  ],
-  plugins: [
-    'jest',
-  ],
+  extends: ['plugin:jest/recommended', 'plugin:jest/style', '@run-z/eslint-config/typescript'],
+  plugins: ['jest'],
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
