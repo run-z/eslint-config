@@ -1,9 +1,7 @@
 module.exports = {
   root: true,
   ignorePatterns: ['node_modules/'],
-  extends: [
-    './index.cjs',
-  ],
+  extends: ['./index.cjs'],
   env: {
     node: true,
   },
