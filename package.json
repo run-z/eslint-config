@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
-    "eslint": "^8.23.0",
+    "eslint": "^8.23.1",
     "eslint-plugin-jest": "^27.0.3"
   },
   "peerDependenciesMeta": {
@@ -40,7 +40,7 @@
     "@run-z/prettier-config": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
-    "eslint": "^8.23.0",
+    "eslint": "^8.23.1",
     "eslint-plugin-jest": "^27.0.4",
     "prettier": "^2.7.1",
     "prettier-eslint-cli": "^7.1.0",
