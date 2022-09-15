@@ -44,7 +44,7 @@
     "eslint-plugin-jest": "^27.0.4",
     "prettier": "^2.7.1",
     "prettier-eslint-cli": "^7.1.0",
-    "run-z": "=1.10.1-bootstrap",
+    "run-z": "1.10.1-bootstrap",
     "typescript": "^4.8.3"
   },
   "scripts": {
