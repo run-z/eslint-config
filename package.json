@@ -52,7 +52,7 @@
     "build": "run-z lint",
     "clean": "run-z",
     "lint": "run-z --then eslint .",
-    "format": "run-z --then prettier-eslint --write --include-dot-files \"src/**/*.*\" \"*.{js,cjs,mjs,json,md}\"",
+    "format": "run-z --then prettier-eslint --write --include-dot-files \"src/**/*.*\" \"*.{js,cjs,json,md}\"",
     "test": "run-z",
     "z": "run-z"
   }
