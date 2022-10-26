@@ -2,7 +2,7 @@ const { builtinModules } = require('node:module');
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2022,
     sourceType: 'module',
   },
   extends: ['eslint:recommended'],
