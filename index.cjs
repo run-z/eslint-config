@@ -40,7 +40,7 @@ module.exports = {
     'generator-star-spacing': 'error',
     'implicit-arrow-linebreak': 'error',
     'key-spacing': 'error',
-    'keyword-spacing': 'error',
+    'keyword-spacing': ['error', { before: true, after: true }],
     'lines-between-class-members': [
       'error',
       'always',
