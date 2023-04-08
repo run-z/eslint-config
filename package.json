@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
+    "eslint": "8.38.0",
     "eslint-plugin-jest": "^27.2.1"
   },
   "peerDependenciesMeta": {
@@ -40,12 +40,12 @@
     "@run-z/prettier-config": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "eslint-plugin-jest": "^27.2.1",
     "prettier": "^2.8.7",
     "prettier-eslint-cli": "^7.1.0",
     "run-z": "1.11.0-bootstrap",
-    "typescript": "~5.0.3"
+    "typescript": "~5.0.4"
   },
   "scripts": {
     "all": "run-z build",
