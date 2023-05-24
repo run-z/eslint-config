@@ -19,6 +19,7 @@
     "./jest": "./jest.cjs",
     "./typescript": "./typescript.cjs"
   },
+  "sideEffects": false,
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
