@@ -195,7 +195,7 @@ module.exports = {
       {
         block: {
           balanced: true,
-          exceptions: ['#__PURE__', '#__INLINE__'],
+          exceptions: ['#__NO_SIDE_EFFECTS__', '#__PURE__', '#__INLINE__'],
         },
       },
     ],
