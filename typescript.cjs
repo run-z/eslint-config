@@ -4,8 +4,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended-type-checked',
   ],
   rules: {
     '@typescript-eslint/ban-types': [
@@ -130,7 +129,7 @@ module.exports = {
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'error',
     '@typescript-eslint/no-invalid-void-type': [
-      'off', // BROKEN: Does not work for the default value of generic type parameter, e.g. `interface Type<T = void>`
+      'off', // BROKEN: Does not work for function type declarations
       {
         allowInGenericTypeArguments: true,
         allowAsThisParameter: true,
@@ -139,10 +138,13 @@ module.exports = {
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-redundant-type-constituents': 'off',
     '@typescript-eslint/no-this-alias': 'off',
     // Required in some situations. E.g. error handling.
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-declaration-merging': 'off',
+    '@typescript-eslint/no-unsafe-enum-comparison': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     // Unusable
     '@typescript-eslint/no-unsafe-return': 'off',
