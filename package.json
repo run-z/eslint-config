@@ -21,10 +21,10 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-jest": "^27.6.0"
+    "eslint-plugin-jest": "^28.6.0"
   },
   "peerDependenciesMeta": {
     "@typescript-eslint/eslint-plugin": {
