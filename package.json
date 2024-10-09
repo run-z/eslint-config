@@ -1,6 +1,6 @@
 {
   "name": "@run-z/eslint-config",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Run Z ESLint configuration",
   "homepage": "https://github.com/run-z/eslint-config",
   "repository": {
@@ -13,38 +13,22 @@
     "url": "https://github.com/run-z/eslint-config/issues"
   },
   "type": "module",
-  "main": "./index.cjs",
-  "exports": {
-    ".": "./index.cjs",
-    "./jest": "./jest.cjs",
-    "./typescript": "./typescript.cjs"
-  },
+  "exports": "./index.js",
   "sideEffects": false,
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-jest": "^28.6.0"
+    "eslint": "^9.12.0"
   },
-  "peerDependenciesMeta": {
-    "@typescript-eslint/eslint-plugin": {
-      "optional": true
-    },
-    "@typescript-eslint/parser": {
-      "optional": true
-    },
-    "eslint-plugin-jest": {
-      "optional": true
-    }
+  "dependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "globals": "^15.11.0",
+    "typescript-eslint": "^8.8.1"
   },
   "devDependencies": {
-    "@run-z/prettier-config": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.1",
-    "eslint-plugin-jest": "^28.8.3",
-    "prettier": "^2.8.8",
-    "prettier-eslint-cli": "^7.1.0",
+    "@run-z/prettier-config": "^3.0.0",
+    "eslint": "^9.12.0",
+    "prettier": "^3.3.3",
     "run-z": "2.1.0-bootstrap",
     "typescript": "~5.6.2"
   },
@@ -53,7 +37,7 @@
     "build": "run-z lint",
     "clean": "run-z",
     "lint": "run-z --then eslint .",
-    "format": "run-z --then prettier-eslint --write --include-dot-files \"src/**/*.*\" \"*.{js,cjs,json,md}\"",
+    "format": "run-z --then prettier --write \"*.{js,cjs,json,md}\"",
     "test": "run-z",
     "z": "run-z"
   }

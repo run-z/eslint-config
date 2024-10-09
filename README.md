@@ -25,46 +25,12 @@ Add dependencies:
 
 ```shell
 pnpm add -D eslint @run-z/eslint-config
-pnpm add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser  # TypeScript support
-pnpm add -D eslint-plugin-jest --save-dev  # Jest support
 ```
 
-Put the following to `.eslintrc.cjs`:
+Put the following to `eslint.config.js`:
 
 ```javascript
-module.exports = {
-  root: true,
-  ignorePatterns: ['node_modules/', 'dist/', 'target/', '*.d.ts'],
-  extends: ['@run-z'],
-  overrides: [
-    // JavaScript
-    {
-      files: ['*.js', '*.cjs', '*.mjs'],
-      env: {
-        node: true,
-      },
-    },
-    // TypeScript
-    {
-      files: ['*.ts'],
-      extends: ['@run-z/eslint-config/typescript'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-      env: {
-        browser: true,
-      },
-    },
-    // Tests (Jest-driven)
-    {
-      files: ['*.spec.ts'],
-      extends: ['@run-z/eslint-config/jest'],
-      parserOptions: {
-        // Dedicated TypeScript configuration for tests
-        project: './tsconfig.spec.json',
-      },
-    },
-  ],
-};
+import configs from '@run-z/eslint-config';
+
+export default configs;
 ```
